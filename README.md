@@ -42,6 +42,7 @@ Map edges, directed edges described by geographic locations (latitude, longitude
 
 ## Technology
 - core logic written in JavaScript (ECMAScript2015/ES6)
+
 - npm for ____
   - http-server for serving
   - babel for transpiling into cross-browser-compatible JavaScript

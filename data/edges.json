@@ -1,17 +1,17 @@
 [
-    {
-        "start": {
-            "lon": 0,
-            "lat": 0,
-            "alt": 0
-        },
-        "end": {
-            "lon": 1,
-            "lat": 1,
-            "alt": 0
-        },
-        "name": "",
-        "type": "road",
-        "rate": 60.0
-    }
+  {
+    "start": {
+      "lon": 0,
+      "lat": 0,
+      "alt": 0
+    },
+    "end": {
+      "lon": 1,
+      "lat": 1,
+      "alt": 0
+    },
+    "name": "",
+    "type": "road",
+    "rate": 60.0
+  }
 ]
