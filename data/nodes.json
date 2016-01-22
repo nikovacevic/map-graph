@@ -1,0 +1,137 @@
+[
+    {
+        "location": {
+            "lon": 0.0,
+            "lat": 0.0,
+            "alt": 0.0
+        },
+        "name": "Origin City",
+        "type": ""
+    },
+    {
+        "location": {
+            "lon": 1.0,
+            "lat": 1.0,
+            "alt": 0.0
+        },
+        "name": "",
+        "type": ""
+    },
+    {
+        "location": {
+            "lon": -5.0,
+            "lat": 10.0,
+            "alt": 0.0
+        },
+        "name": "",
+        "type": ""
+    },
+    {
+        "location": {
+            "lon": -10.0,
+            "lat": -6.0,
+            "alt": 0.0
+        },
+        "name": "",
+        "type": ""
+    },
+    {
+        "location": {
+            "lon": 1.0,
+            "lat": 10.0,
+            "alt": 0.0
+        },
+        "name": "",
+        "type": ""
+    },
+    {
+        "location": {
+            "lon": 3.0,
+            "lat": 1.0,
+            "alt": 0
+        },
+        "name": "",
+        "type": ""
+    },
+    {
+        "location": {
+            "lon": 2.0,
+            "lat": 2.0,
+            "alt": 0
+        },
+        "name": "",
+        "type": ""
+    },
+    {
+        "location": {
+            "lon": 1.0,
+            "lat": 4.0,
+            "alt": 0
+        },
+        "name": "",
+        "type": ""
+    },
+    {
+        "location": {
+            "lon": -3.0,
+            "lat": -3.0,
+            "alt": 0.0
+        },
+        "name": "",
+        "type": ""
+    },
+    {
+        "location": {
+            "lon": 1.0,
+            "lat": -2.0,
+            "alt": 0.0
+        },
+        "name": "",
+        "type": ""
+    },
+    {
+        "location": {
+            "lon": 5.0,
+            "lat": -1.0,
+            "alt": 0.0
+        },
+        "name": "",
+        "type": ""
+    },
+    {
+        "location": {
+            "lon": 1.0,
+            "lat": -2.0,
+            "alt": 0.0
+        },
+        "name": "",
+        "type": ""
+    },
+    {
+        "location": {
+            "lon": -4.0,
+            "lat": -3.0,
+            "alt": 0.0
+        },
+        "name": "",
+        "type": ""
+    },
+    {
+        "location": {
+            "lon": 10.0,
+            "lat": 0.0,
+            "alt": 0.0
+        },
+        "name": "",
+        "type": ""
+    },
+    {
+        "location": {
+            "lon": -1.0,
+            "lat": 1.0,
+            "alt": 0.0
+        },
+        "name": "",
+        "type": ""
+    },
+]
