@@ -12,7 +12,7 @@
     "start": "http-server",
     "webpack": "webpack"
   },
-  "author": "Niko Kovacevic",
+  "author": "Niko Kovacevic <nikovacevic@gmail.com> (https://github.com/nikovacevic)",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.4.5",
