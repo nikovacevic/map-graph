@@ -1,3 +1,5 @@
 .git/*
 build/*
 .editorconfig
+webpack.config.js
+npm-debug.log

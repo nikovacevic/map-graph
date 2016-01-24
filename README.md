@@ -17,7 +17,7 @@ Map nodes, uniquely described by a geographic location (latitude, longitude, alt
 }
 ```
 ### edges.json
-Map edges, directed edges described by geographic locations (latitude, longitude, altitude) of termini. Additional, optional information: name, type, rate  in mph.
+Map edges, directed edges described by geographic locations (latitude, longitude, altitude) of termini. Optional information includes name, type.
 ```
 {
     "start": {
@@ -31,8 +31,7 @@ Map edges, directed edges described by geographic locations (latitude, longitude
         "alt": (float)  // z-coordinate
     },
     "name": (string),
-    "type": (string),
-    "rate": (double)    // mph
+    "type": (string)
 }
 ```
 
