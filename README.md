@@ -5,6 +5,7 @@ Graph implementation of a map in ECMAScript2015 (ES6).
 Project structure and tooling based on [ES6 Tutorial](http://ccoenraets.github.io/es6-tutorial/) by @ccoenrates.
 
 ## Data
+
 ### test.json
 Map nodes, described by a geographic location (latitude, longitude, altitude), name, type, and set of edges originating at this node.
 ```
@@ -31,11 +32,14 @@ Map nodes, described by a geographic location (latitude, longitude, altitude), n
 ```
 
 ## Modules
+
 ### map-graph
 Graph implementation. Manages a map of id => map-node objects.
 - TODO Provide start-to-end route searching feature
 - TODO Provide TSP search feature
+
 ### map-node
-Node implementation. Manages node properties and set of map-edges originating at this node.
+Node implementation. Manages node properties and set of map-edges originating at this node.  
+
 ### map-edge
 Edge implementation. Manages edge properties.
