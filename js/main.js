@@ -1,10 +1,6 @@
-/**
- *
- */
-
 import * as mapGraph from "./map-graph";
 
-let dataUrl = "data/test-map.json";
+let dataUrl = "data/test.json";
 
 console.log("Welcome to Map Graph!");
 

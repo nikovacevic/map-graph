@@ -1,13 +1,10 @@
 /**
- *
+ * map-edge implements a directed edge of a map-graph, described by a starting
+ * map-node and an ending map-node.
+ * @author Niko Kovacevic <nikovacevic@gmail.com>
  */
 
 import * as mapNode from "./map-node";
-
-// TODO resolve unique identification
-// There could exist two or more edges with the same start and end locations,
-// type and name.
-// TODO implement node-uuid
 
 let start = null,
     end = null,

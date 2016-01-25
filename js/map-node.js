@@ -1,13 +1,11 @@
 /**
- *
+ * map-node implements a node of a map-graph, managing a set of directed edges
+ * originating at this node.
+ * TODO getNeighbors
+ * @author Niko Kovacevic <nikovacevic@gmail.com>
  */
 
 import * as mapEdge from "./map-edge";
-
-// TODO resolve unique identification
-// Could there exist two or more nodes with the same {lat, lon, alt}? If so,
-// type and name should not be used to make nodes unique.
-// TODO implement node-uuid
 
 let lon = 0.0,
     lat = 0.0,
