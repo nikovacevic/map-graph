@@ -4,6 +4,8 @@ let dataUrl = "data/test.json";
 
 console.log("Welcome to Map Graph!");
 
-document.getElementById("loadGraph").addEventListener("click", () => {
-  mapGraph.loadGraph(dataUrl);
-});
+mapGraph.loadURL(dataUrl)
+  .then(() => mapGraph.print())
+  // TODO This one doesn't work. Why?
+  // .then(mapGraph.print())
+  .catch(e => console.log(e));

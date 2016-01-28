@@ -12,7 +12,7 @@
 import * as mapNode from "./map-node";
 import * as mapEdge from "./map-edge";
 
-let nodes = new Map();
+const nodes = new Map();
 
 function* idGenerator() {
   let id = 0;
@@ -37,20 +37,27 @@ export let removeNode = (id) => {
   nodes.delete(id);
 }
 
+/**
+ * @param url
+ * @return Promise
+ */
+export let loadURL = (url) => new Promise(function (resolve, reject) {
+  fetch(url)
+    .then(response => response.json())
+    .then(data => data.map(jsonToNode))
+    .then(node => resolve(node))
+    .catch(e => reject(e));
+});
+
+export let print = () => {
+  console.log(nodes);
+}
+
 // TODO export let bfs = (start, end) => {}
 
 // TODO export let dijkstra = (start, end) => {}
 
 // TODO export let aStar = (start, end) => {}
-
-export let loadGraph = (dataUrl) => {
-  // Fetch nodes from nodesUrl
-  fetch(dataUrl)
-    .then(response => response.json())
-    .then(data => data.map(jsonToNode))
-    .then(printGraph)
-    .catch(e => console.log(e));
-};
 
 let jsonToNode = (json) => {
   let node = Object.create(mapNode);
@@ -70,6 +77,8 @@ let jsonToNode = (json) => {
   node.setEdges(edges);
 
   addNode(node);
+
+  return node;
 }
 
 let jsonToEdge = (json) => {
@@ -82,9 +91,4 @@ let jsonToEdge = (json) => {
   );
 
   return e;
-}
-
-let printGraph = () => {
-  console.log(nodes.size + " nodes loaded:");
-  console.log(nodes);
 }
