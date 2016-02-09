@@ -9,58 +9,46 @@
     "type": "",
     "edges" : [
       {
-        "end_location": {
+        "destination": {
           "lon": "1.0",
           "lat": "1.0",
           "alt": "0.0"
-        },
-        "name": "",
-        "type": "road"
+        }
       },
       {
-        "end_location": {
+        "destination": {
           "lon": "-1.0",
           "lat": "1.0",
           "alt": "0.0"
-        },
-        "name": "",
-        "type": "road"
+        }
       },
       {
-        "end_location": {
+        "destination": {
           "lon": "-2.0",
           "lat": "-1.0",
           "alt": "0.0"
-        },
-        "name": "",
-        "type": "road"
+        }
       },
       {
-        "end_location": {
+        "destination": {
           "lon": "1.0",
           "lat": "-2.0",
           "alt": "0.0"
-        },
-        "name": "",
-        "type": "road"
+        }
       },
       {
-        "end_location": {
+        "destination": {
           "lon": "5.0",
           "lat": "-1.0",
           "alt": "0.0"
-        },
-        "name": "",
-        "type": "road"
+        }
       },
       {
-        "end_location": {
+        "destination": {
           "lon": "3.0",
           "lat": "1.0",
           "alt": "0.0"
-        },
-        "name": "",
-        "type": "road"
+        }
       }
     ]
   },
@@ -70,8 +58,6 @@
       "lat": "1.0",
       "alt": "0.0"
     },
-    "name": "",
-    "type": "",
     "edges" : []
   },
   {
@@ -80,8 +66,6 @@
       "lat": "10.0",
       "alt": "0.0"
     },
-    "name": "",
-    "type": "",
     "edges" : []
   },
   {
@@ -90,8 +74,6 @@
       "lat": "-6.0",
       "alt": "0.0"
     },
-    "name": "",
-    "type": "",
     "edges" : []
   },
   {
@@ -100,8 +82,6 @@
       "lat": "10.0",
       "alt": "0.0"
     },
-    "name": "",
-    "type": "",
     "edges" : []
   },
   {
@@ -110,8 +90,6 @@
       "lat": "1.0",
       "alt": "0.0"
     },
-    "name": "",
-    "type": "",
     "edges" : []
   },
   {
@@ -120,8 +98,6 @@
       "lat": "2.0",
       "alt": "0.0"
     },
-    "name": "",
-    "type": "",
     "edges" : []
   },
   {
@@ -130,8 +106,6 @@
       "lat": "4.0",
       "alt": "0.0"
     },
-    "name": "",
-    "type": "",
     "edges" : []
   },
   {
@@ -140,8 +114,6 @@
       "lat": "-3.0",
       "alt": "0.0"
     },
-    "name": "",
-    "type": "",
     "edges" : []
   },
   {
@@ -150,8 +122,6 @@
       "lat": "-2.0",
       "alt": "0.0"
     },
-    "name": "",
-    "type": "",
     "edges" : []
   },
   {
@@ -160,8 +130,6 @@
       "lat": "-1.0",
       "alt": "0.0"
     },
-    "name": "",
-    "type": "",
     "edges" : []
   },
   {
@@ -170,8 +138,6 @@
       "lat": "-2.0",
       "alt": "0.0"
     },
-    "name": "",
-    "type": "",
     "edges" : []
   },
   {
@@ -180,8 +146,6 @@
       "lat": "-3.0",
       "alt": "0.0"
     },
-    "name": "",
-    "type": "",
     "edges" : []
   },
   {
@@ -190,8 +154,6 @@
       "lat": "0.0",
       "alt": "0.0"
     },
-    "name": "",
-    "type": "",
     "edges" : []
   },
   {
@@ -200,8 +162,6 @@
       "lat": "1.0",
       "alt": "0.0"
     },
-    "name": "",
-    "type": "",
     "edges" : []
   }
 ]
