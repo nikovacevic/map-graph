@@ -13,38 +13,42 @@
 
 import Node from "./Node";
 import Edge from "./Edge";
+import { readFile } from "fs";
+import * as uuid from "uuid";
 
-function* idGenerator() {
-  let id = 0;
-  while (id > -1)
-    yield id++;
-}
-let idGen = idGenerator();
-
-export const Graph = () => {
+const Graph = () => {
 
   let nodes = new Map();
 
-  return {
+  const self = {
     getNodes: () => nodes,
     getNode: (id) => nodes.get(id),
     addNode: (node) => {
-      nodes.set(idGen.next().value, node);
+      const i = uuid.v1();
+      node.setID(i);
+      nodes.set(i, node);
+      return node;
     },
-    removeNode: (id) => {
-      nodes.delete(id);
-    },
+    removeNode: (id) => nodes.delete(id),
 
-    loadURL: (url) => new Promise(function (resolve, reject) {
-      fetch(url)
-        .then(response => response.json())
-        .then(data => data.map(Graph.jsonToNode))
-        .then(node => resolve(node))
-        .catch(e => reject(e));
-    }),
+    // TODO use streams
+    loadFromURL: (url, cb) => {
+      readFile(url, 'utf8', (err, data) => {
+        if (err) return cb(err, null);
+        try {
+          const jsonData = JSON.parse(data);
+          jsonData.forEach((d) => {
+            let n = Node().loadJSON(d);
+            self.addNode(n);
+          });
+        } catch (e) {
+          console.log(e);
+        }
+      });
+    },
 
     print: () => {
-      console.log(nodes);
+      console.log(getNodes());
     },
 
     // TODO bfs: (start, end) => {}
@@ -53,36 +57,8 @@ export const Graph = () => {
 
     // TODO aStar: (start, end) => {}
 
-    jsonToNode: (json) => {
-      let node = Object.create(Node);
-
-      node.setLat(json.location.lat);
-      node.setLon(json.location.lon);
-      node.setAlt(json.location.alt);
-
-      let edges = json.edges
-        .map(Graph.jsonToEdge)
-        .map((edge) => {
-          edge.setStart(node);
-          return edge;
-        });
-      node.setEdges(edges);
-
-      addNode(node);
-
-      return node;
-    },
-
-    jsonToEdge: (json) => {
-      let e = Object.create(Edge);
-
-      e.setEndCoordinates(
-        json.destination.lon,
-        json.destination.lat,
-        json.destination.alt
-      );
-
-      return e;
-    }
   };
+  return self;
 };
+
+export default Graph;

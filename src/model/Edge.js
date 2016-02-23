@@ -12,12 +12,12 @@ import Node from "./Node";
  * @param orig origin Node
  * @param dest destination Node
  */
-export const Edge = (orig, dest) => {
+const Edge = (orig, dest) => {
 
   let origin = orig,
       destination = dest;
 
-  return {
+  const self = {
     getOrigin: () => origin,
     setOrigin: (s) => {
       origin = s;
@@ -28,4 +28,7 @@ export const Edge = (orig, dest) => {
       destination = e;
     }
   };
+  return self;
 };
+
+export default Edge;
