@@ -11,10 +11,10 @@
  * @author Niko Kovacevic <nikovacevic@gmail.com>
  */
 
-import Node from "./Node";
-import Edge from "./Edge";
 import { readFile } from "fs";
 import * as uuid from "uuid";
+import Node from "./Node";
+import Edge from "./Edge";
 
 const Graph = () => {
 
@@ -27,28 +27,27 @@ const Graph = () => {
       const i = uuid.v1();
       node.setID(i);
       nodes.set(i, node);
-      return node;
+      return self;
     },
-    removeNode: (id) => nodes.delete(id),
+    removeNode: (id) => {
+      nodes.delete(id);
+      return self;
+    },
 
-    // TODO use streams
     loadFromURL: (url, cb) => {
       readFile(url, 'utf8', (err, data) => {
         if (err) return cb(err, null);
         try {
-          const jsonData = JSON.parse(data);
-          jsonData.forEach((d) => {
-            let n = Node().loadJSON(d);
-            self.addNode(n);
-          });
+          JSON.parse(data).forEach(d => self.addNode(Node().loadJSON(d)));
         } catch (e) {
-          console.log(e);
+          cb(e, null);
         }
       });
+      return self;
     },
 
     print: () => {
-      console.log(getNodes());
+      console.log(self.getNodes());
     },
 
     // TODO bfs: (start, end) => {}

@@ -21,11 +21,13 @@ const Edge = (orig, dest) => {
     getOrigin: () => origin,
     setOrigin: (s) => {
       origin = s;
+      return self;
     },
 
     getDestination: () => destination,
     setDestination: (e) => {
       destination = e;
+      return self;
     }
   };
   return self;

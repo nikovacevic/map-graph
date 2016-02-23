@@ -25,61 +25,55 @@ const Node = (lon, lat, alt, edg) => {
       altitude = alt,
       edges = edg;
 
-  console.log("Creating node:");
-  console.log("Lat:" + lat);
-  console.log("Lon:" + lon);
-  console.log("Alt:" + alt);
-  console.log("Edges:" + edg);
-
   const self = {
     getLongitude: () => longitude,
     setLongitude: (l) => {
       longitude = l;
-      return this;
+      return self;
     },
 
     getLatitude: () => latitude,
     setLatitude: (l) => {
       latitude = l;
-      return this;
+      return self;
     },
 
     getAltitude: () => altitude,
     setAltitude: (a) => {
       altitude = a;
-      return this;
+      return self;
     },
 
     getEdges: () => edges,
     setEdges: (e) => {
       edges = e;
-      return this;
+      return self;
     },
-    addEdge: (e) => edges.push(e),
+    addEdge: (e) => {
+      edges.push(e);
+      return self;
+    },
     removeEdge: (r) => {
       edges = edges.filter(e => e !== r);
-      return r;
+      return self;
     },
 
     getID: () => id,
     setID: (i) => {
       id = i;
-      return this;
+      return self;
     },
 
-    toString: () => {
-      return util.format("%j", this);
-    },
+    toString: () => util.format("%j", self),
 
     loadJSON: (json) => {
       self.setLongitude(json.location.lon);
       self.setLatitude(json.location.lat);
       self.setAltitude(json.location.alt);
       self.setEdges(json.edges);
-      return this;
+      return self;
     }
   };
-  console.log(self);
   return self;
 };
 
