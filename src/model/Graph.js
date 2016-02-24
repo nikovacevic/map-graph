@@ -11,7 +11,7 @@
  * @author Niko Kovacevic <nikovacevic@gmail.com>
  */
 
-import { readFile } from "fs";
+import * as fs from "fs";
 import * as uuid from "uuid";
 import Node from "./Node";
 import Edge from "./Edge";
@@ -35,7 +35,7 @@ const Graph = () => {
     },
 
     loadFromURL: (url, cb) => {
-      readFile(url, 'utf8', (err, data) => {
+      fs.readFile(url, 'utf8', (err, data) => {
         if (err) return cb(err, null);
         try {
           let nodeCount = 0;

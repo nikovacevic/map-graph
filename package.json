@@ -6,9 +6,10 @@
     "type": "git",
     "url": "https://github.com/nikovacevic/node-graph.git"
   },
-  "main": "src/main.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "babel --presets es2015 src -d build",
+    "build": "babel --presets es2015 src/index.js -o dist/index.bundle.js",
+    "start": "node dist/index.bundle.js data/test.json",
     "webpack": "webpack"
   },
   "author": "Niko Kovacevic <nikovacevic@gmail.com> (https://github.com/nikovacevic)",
@@ -22,6 +23,7 @@
     "webpack": "^1.12.13"
   },
   "dependencies": {
+    "fs": "0.0.2",
     "uuid": "^2.0.1"
   }
 }

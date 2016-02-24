@@ -2,9 +2,10 @@
 .editorconfig
 .jshintrc
 .DS_Store
-npm-debug.log
-webpack.config.js
 */.DS_Store
 *.swp
+node_modules
+npm-debug.log
+webpack.config.js
 build/*
 dist/*
