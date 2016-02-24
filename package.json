@@ -9,6 +9,7 @@
   "main": "src/main.js",
   "scripts": {
     "build": "babel --presets es2015 src -d build",
+    "start": "node build/main.js data/test.json",
     "webpack": "webpack"
   },
   "author": "Niko Kovacevic <nikovacevic@gmail.com> (https://github.com/nikovacevic)",
