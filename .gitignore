@@ -6,6 +6,5 @@
 *.swp
 node_modules
 npm-debug.log
-webpack.config.js
 build/*
 dist/*
