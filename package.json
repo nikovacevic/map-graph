@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/nikovacevic/node-graph.git"
   },
-  "main": "lib/main.js",
+  "main": "src/main.js",
   "scripts": {
     "build": "babel --presets es2015 src -d build",
     "webpack": "webpack"

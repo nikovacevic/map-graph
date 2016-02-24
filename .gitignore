@@ -1,6 +1,10 @@
 .git/*
-build/*
 .editorconfig
 .jshintrc
-webpack.config.js
+.DS_Store
 npm-debug.log
+webpack.config.js
+*/.DS_Store
+*.swp
+build/*
+dist/*
