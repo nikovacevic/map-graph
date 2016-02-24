@@ -38,12 +38,17 @@ const Graph = () => {
       readFile(url, 'utf8', (err, data) => {
         if (err) return cb(err, null);
         try {
-          JSON.parse(data).forEach(d => self.addNode(Node().loadJSON(d)));
+          let nodeCount = 0;
+          // Parse JSON, load each object into a new Node, add Node to Graph
+          JSON.parse(data).forEach((d) => {
+            self.addNode(Node().loadJSON(d));
+            nodeCount++;
+          });
+          return cb(null, nodeCount);
         } catch (e) {
           cb(e, null);
         }
       });
-      return self;
     },
 
     print: () => {

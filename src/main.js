@@ -21,6 +21,10 @@ graph.loadFromURL(dataUrl, function(err, data) {
     console.error(err);
     return false;
   }
-  // TODO not getting here
-  graph.print();
+
 });
+
+const promptAction = () => {
+  console.log("[add (lon, lat, alt) ... Add node at coordinates");
+  console.log("[rm  (lon, lat, alt) ... Remove node at coordinates");
+};
